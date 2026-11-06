@@ -893,3 +893,30 @@ a{color:inherit}
 
 /* ajustes 2: «Si no cumple…» con el mismo tamaño del párrafo anterior (en negrita, centrado) */
 .lead.lead-fin{font-size:clamp(16px,1.5vw,19px);margin-top:20px}
+
+/* ===== Ajustes 3 (2026-11-06) ===== */
+/* tabla de prefectos sin la columna «Ventaja» */
+.ree .fila{grid-template-columns:290px 1fr 240px}
+.ree .head span:nth-child(3){text-align:left}
+@media(max-width:960px){.ree .fila{grid-template-columns:minmax(0,1fr);grid-template-areas:"n" "b" "c"}}
+/* dos cuadros bajo la tabla */
+.vz-cards.dos{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:24px}
+.vz-cards.dos .vz-card p{font-size:clamp(16px,1.4vw,18px)}
+@media(max-width:960px){.vz-cards.dos{grid-template-columns:1fr}}
+
+/* cuadros bajo la tabla de prefectos */
+.viz.dos2{margin-top:24px}
+.dos2 .vz-big{font-size:clamp(52px,6vw,84px)}
+.dos2 .vz-head{min-height:0;margin-bottom:18px}
+.dos2 .vz-txt{margin:0;font-size:clamp(17px,1.6vw,21px);line-height:1.4;color:var(--text-2)}
+.dos2 .vz-txt strong{color:#fff;font-weight:800}
+.dos2 .vz-uno{display:flex;align-items:center;gap:18px;margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+.dos2 .trio{display:flex;gap:6px;flex:none}
+.dos2 .trio i{width:22px;height:22px;border-radius:50%;display:block;background:var(--lavender)}
+.dos2 .trio i.d-p{background:var(--olive)}
+.dos2 .vz-quote{justify-content:center}
+.dos2 .vz-quote .vz-txt{font-size:clamp(16px,1.4vw,18px);line-height:1.55}
+.viz.dos2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:960px){.viz.dos2{grid-template-columns:1fr}}
+.dos2 .vz-quote{justify-content:flex-start;align-items:flex-start;gap:22px}
+.dos2 .vz-quote{justify-content:center;align-items:center;text-align:center}
