@@ -941,3 +941,17 @@ a{color:inherit}
 .viz .waffle .d-a,.viz .vz-leg .d-a{background:var(--yellow)}
 .d-p,.dos2 .trio i.d-p{box-shadow:none}
 .viz:not(.dos2) .vz-big{color:var(--lavender)}
+
+/* animaciones de gráficos al entrar en pantalla (solo si hay JS y no se pidió reducir movimiento) */
+.js-anim .mu-bar i,.js-anim .edad .b i,.js-anim .ree .b i,.js-anim .ob .ot i{transform-origin:left center;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.js-anim .var .barra{transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.js-anim .var .barra.neg{transform-origin:right center}
+.js-anim .var .barra.pos{transform-origin:left center}
+.js-anim .mu-bar:not(.in) i,.js-anim .chart:not(.in) .edad .b i,.js-anim .chart:not(.in) .ree .b i,.js-anim .chart:not(.in) .ob .ot i,.js-anim .chart.var:not(.in) .barra{transform:scaleX(0)}
+.js-anim .b span,.js-anim .var .val,.js-anim .ob .ov,.js-anim .ree .corre,.js-anim .resumen4,.js-anim .enlace{transition:opacity .6s ease .7s}
+.js-anim .chart:not(.in) .b span,.js-anim .chart.var:not(.in) .val,.js-anim .chart:not(.in) .ob .ov,.js-anim .chart:not(.in) .resumen4,.js-anim .chart:not(.in) .enlace{opacity:0}
+.js-anim .pb{transition:transform .9s cubic-bezier(.3,1.35,.5,1),opacity .6s ease}
+.js-anim .chart.orgs:not(.in) .pb{transform:scale(.15);opacity:0}
+.js-anim .pb.psc{transition-delay:.12s}.js-anim .pb.sm{transition-delay:.3s}.js-anim .pb:nth-child(3){transition-delay:.22s}
+.js-anim .waffle i{transition:transform .45s cubic-bezier(.3,1.4,.5,1),opacity .35s ease}
+.js-anim .viz:not(.in) .waffle i{transform:scale(0);opacity:0}
