@@ -510,15 +510,15 @@ a{color:inherit}
 .orgs .grupo .resumen4{all:unset}
 .orgs .enlace{flex:1 1 40px;min-width:36px;max-width:120px;height:0;border-top:2px dashed rgba(221,240,134,.65);position:relative;margin:0 4px 0 0}
 .orgs .enlace::after{content:"";position:absolute;right:-2px;top:-7px;width:12px;height:12px;border-top:2px solid var(--olive);border-right:2px solid var(--olive);transform:rotate(45deg)}
-.orgs .top>.resumen4{flex:none;display:flex;flex-direction:column;gap:6px;padding:22px 30px;border-radius:24px;background:linear-gradient(135deg,rgba(221,240,134,.24),rgba(221,240,134,.1));border:2px solid rgba(221,240,134,.7);max-width:none;text-align:left;margin:0 0 0 10px}
+.orgs .top .resumen4{flex:none;display:flex;flex-direction:column;gap:6px;padding:22px 30px;border-radius:24px;background:linear-gradient(135deg,rgba(221,240,134,.24),rgba(221,240,134,.1));border:2px solid rgba(221,240,134,.7);max-width:none;text-align:left;margin:0 0 0 10px}
 .r4n{font-size:clamp(46px,5.6vw,80px);font-weight:800;line-height:.9;letter-spacing:-.04em;color:var(--olive)}
 .r4t{font-size:clamp(17px,1.8vw,24px);font-weight:700;line-height:1.15;color:#fff}
-@media(max-width:860px){.orgs .top{flex-direction:column;align-items:stretch}.orgs .enlace{display:none}.orgs .top>.resumen4{margin:16px 0 0;align-items:flex-start}}
+@media(max-width:860px){.orgs .top{flex-direction:column;align-items:stretch}.orgs .enlace{display:none}.orgs .top .resumen4{margin:16px 0 0;align-items:flex-start}}
 @media(min-width:861px){
   .orgs .top{flex-wrap:nowrap}
   .orgs .grupo{flex:0 1 auto;padding:28px clamp(18px,2.4vw,34px) 24px}
   .orgs .grupo .burbujas{gap:clamp(14px,2.2vw,34px)}
-  .orgs .top>.resumen4{padding:20px 24px;margin-left:6px}
+  .orgs .top .resumen4{padding:20px 24px;margin-left:6px}
   .r4n{font-size:clamp(40px,4.6vw,64px)}
   .r4t{font-size:clamp(16px,1.6vw,21px)}
 }
@@ -913,10 +913,31 @@ a{color:inherit}
 .dos2 .vz-uno{display:flex;align-items:center;gap:18px;margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
 .dos2 .trio{display:flex;gap:6px;flex:none}
 .dos2 .trio i{width:22px;height:22px;border-radius:50%;display:block;background:var(--lavender)}
-.dos2 .trio i.d-p{background:var(--olive)}
+.dos2 .trio i.d-p{background:var(--yellow)}
 .dos2 .vz-quote{justify-content:center}
 .dos2 .vz-quote .vz-txt{font-size:clamp(16px,1.4vw,18px);line-height:1.55}
 .viz.dos2{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:960px){.viz.dos2{grid-template-columns:1fr}}
 .dos2 .vz-quote{justify-content:flex-start;align-items:flex-start;gap:22px}
 .dos2 .vz-quote{justify-content:center;align-items:center;text-align:center}
+.viz.dos2{margin-top:clamp(40px,5vw,64px)}
+.orgs .chart h4+.csub,.chart.orgs h4+.csub{margin-top:14px}
+.chart.alc{margin-top:clamp(40px,5vw,64px)}
+.chart.alc .viz.dos2{margin-top:22px}
+
+/* asterisco en títulos de cuadros de reelección */
+.chart h4 .t-ast{display:inline-block;width:.8em;height:.8em;margin-right:.45em;vertical-align:-.04em;background:var(--olive);-webkit-mask:url(brand/asterisco.svg) center/contain no-repeat;mask:url(brand/asterisco.svg) center/contain no-repeat}
+/* textos de alcaldes sin cuadro, separados por una línea al centro */
+.chart.alc .viz.dos2{gap:0}
+.chart.alc .viz.dos2 .vz-panel{background:none;border:0;border-radius:0;padding:8px clamp(20px,3vw,40px)}
+.chart.alc .viz.dos2 .vz-panel:first-child{padding-left:0}
+.chart.alc .viz.dos2 .vz-quote{border-left:1px solid var(--line);padding-right:0}
+@media(max-width:960px){.chart.alc .viz.dos2 .vz-panel{padding:8px 0}.chart.alc .viz.dos2 .vz-quote{border-left:0;border-top:1px solid var(--line);margin-top:24px;padding-top:28px}}
+
+/* alcaldes en amarillo */
+.dos2 .vz-big{color:var(--yellow)}
+.chart.alc h4 .t-ast{background:var(--yellow)}
+.dos2 .trio i.d-p{box-shadow:0 0 0 3px rgba(253,195,3,.28)}
+.viz .waffle .d-a,.viz .vz-leg .d-a{background:var(--yellow)}
+.d-p,.dos2 .trio i.d-p{box-shadow:none}
+.viz:not(.dos2) .vz-big{color:var(--lavender)}
